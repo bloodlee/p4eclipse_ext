@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            adaptable="false"
+            id="org.yli.p4eclipse.extension.post_review_request"
+            objectClass="com.perforce.team.core.p4java.IP4PendingChangelist">
+         <menu
+               id="org.yli.p4eclipse.extension.post_review_request_menu"
+               label="%POST_REVIEW_REQUEST">
+         </menu>
+         <action
+               class="org.yli.p4eclipse.extension.actions.PostReviewRequestAction"
+               icon="icon/reviewboard.png"
+               id="org.yli.p4eclipse.extension.post_review_request_action"
+               label="%POST_REVIEW_REQUEST"
+               menubarPath="org.yli.p4eclipse.extension.post_review_request_menu">
+         </action>
+      </objectContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            class="org.yli.p4eclipse.extension.perferences.WorkbenchPerferencePage"
+            id="org.yli.p4eclipse.extension.perference_page"
+            name="%P4ECLIPSE_PERF">
+      </page>
+   </extension>
+   <extension
+         point="org.eclipse.core.runtime.preferences">
+      <initializer
+            class="org.yli.p4eclipse.extension.perferences.PreferenceInitializer">
+      </initializer>
+   </extension>
+
+</plugin>

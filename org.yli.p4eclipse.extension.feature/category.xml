@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/org.yli.p4eclipse.extension.feature_0.1.0.jar" id="org.yli.p4eclipse.extension.feature" version="0.1">
+      <category name="p4eclipse_ext_category"/>
+   </feature>
+   <category-def name="p4eclipse_ext_category" label="P4Eclipse Extension"/>
+</site>

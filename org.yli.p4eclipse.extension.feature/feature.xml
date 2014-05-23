@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.yli.p4eclipse.extension.feature"
+      label="%FEATURE_NAME"
+      version="0.1"
+      provider-name="%AUTHOR"
+      plugin="org.yli.p4eclipse.extension">
+
+   <description url="http://www.sample.com">
+      P4Eclipse Extension
+   </description>
+
+   <copyright url="http://www.sample.com">
+      P4Eclipse Extension
+   </copyright>
+
+   <license url="http://www.eclipse.org/legal/epl-v10.html">
+      Eclipse Public License v1.0
+   </license>
+
+   <requires>
+      <import plugin="org.eclipse.ui"/>
+      <import plugin="org.eclipse.core.runtime"/>
+      <import feature="com.perforce.team.feature" version="2012.3.607775"/>
+      <import plugin="com.perforce.team.ui" version="2012.2.486944" match="greaterOrEqual"/>
+      <import plugin="com.perforce.p4api" version="2012.2.486944" match="greaterOrEqual"/>
+      <import plugin="com.perforce.team.core" version="2012.2.486944" match="greaterOrEqual"/>
+   </requires>
+
+   <plugin
+         id="org.yli.p4eclipse.extension"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+</feature>
