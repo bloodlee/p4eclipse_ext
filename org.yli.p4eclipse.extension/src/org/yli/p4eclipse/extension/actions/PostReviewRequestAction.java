@@ -45,17 +45,18 @@ public class PostReviewRequestAction implements IObjectActionDelegate {
 		}
 		
 		IWorkbenchPage page = PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage();
-		IViewPart view = page.findView(PENDING_LIST_VIEW_ID);
+		IViewPart view = (IViewPart) page.getActivePart();
 		
 		if (view != null) {
 			logInfo("retrieving the pending changelist id"); //$NON-NLS-1$
 
 			PendingView pendingView = (PendingView)view;
+			
 			TreeViewer treeViewer = pendingView.getPerforceViewControl().getViewer();
 			if (treeViewer != null) {
 				TreeItem[] items = treeViewer.getTree().getSelection();
-				if (items.length > 0) {
-					IP4PendingChangelist pendingCL = (IP4PendingChangelist)(items[0].getData());
+				for (TreeItem item : items) {
+					IP4PendingChangelist pendingCL = (IP4PendingChangelist)(item.getData());
 					
 					if (pendingCL != null) {
 						int changelistId = pendingCL.getId();
@@ -72,6 +73,8 @@ public class PostReviewRequestAction implements IObjectActionDelegate {
 					}
 				}
 			}
+		} else {
+			logInfo("Couldn't find the pending list view");
 		}
 	}
 

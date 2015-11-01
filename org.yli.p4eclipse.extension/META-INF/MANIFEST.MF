@@ -2,16 +2,17 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %PLUGIN_NAME
 Bundle-SymbolicName: org.yli.p4eclipse.extension;singleton:=true
-Bundle-Version: 0.1
+Bundle-Version: 0.2.2
 Bundle-Activator: org.yli.p4eclipse.extension.Activator
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
- com.perforce.team.ui;bundle-version="2012.2.486944",
- com.perforce.p4api;bundle-version="2012.2.486944",
- com.perforce.team.core;bundle-version="2012.2.486944"
+ com.perforce.p4api;bundle-version="2014.1.965331",
+ com.perforce.team.core;bundle-version="2014.1.965331",
+ com.perforce.team.ui;bundle-version="2014.1.965331",
+ org.eclipse.ui.console;bundle-version="3.6.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Bundle-ActivationPolicy: lazy
-Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-Localization: plugin
 Bundle-Vendor: %AUTHOR
-Bundle-ClassPath: lib/com.perforce.team.ui_2012.2.486944.jar,
+Bundle-ClassPath: lib/com.perforce.team.ui_2014.1.965331.jar,
  .

@@ -1,5 +1,6 @@
 package org.yli.p4eclipse.extension.perferences;
 
+import org.eclipse.jface.preference.BooleanFieldEditor;
 import org.eclipse.jface.preference.DirectoryFieldEditor;
 import org.eclipse.jface.preference.FieldEditorPreferencePage;
 import org.eclipse.jface.preference.StringFieldEditor;
@@ -30,6 +31,9 @@ public class WorkbenchPerferencePage extends FieldEditorPreferencePage implement
 		addField(new StringFieldEditor(PreferenceKeys.POST_REVIEW_CMD_LINE, 
 				Messages.WorkbenchPerferencePage_POST_REVIEW_CMD_LINE,
 		        getFieldEditorParent()));
+		addField(new BooleanFieldEditor(PreferenceKeys.SHOW_DEBUG_INFO, 
+				Messages.WorkbenchPerferencePage_ENABLE_DEBUG, 
+				getFieldEditorParent()));
 	}
 
 }

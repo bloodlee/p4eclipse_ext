@@ -13,7 +13,7 @@
          </menu>
          <action
                class="org.yli.p4eclipse.extension.actions.PostReviewRequestAction"
-               icon="icon/reviewboard.png"
+               icon="reviewboard.png"
                id="org.yli.p4eclipse.extension.post_review_request_action"
                label="%POST_REVIEW_REQUEST"
                menubarPath="org.yli.p4eclipse.extension.post_review_request_menu">
